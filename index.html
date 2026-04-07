@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RadioBob Voiceworks</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #f5f7fa;
+    color: #2b2b2b;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(135deg, #1E3A8A, #0B1F3A);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.logo {
+    width: 240px;
+    margin-bottom: 15px;
+}
+
+header h1 {
+    margin: 10px 0 5px;
+    font-size: 2.8em;
+}
+
+.tagline {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+/* NAV */
+nav {
+    background: #0B1F3A;
+    padding: 12px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 18px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* SECTIONS */
+section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 60px 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h2 {
+    color: #1E3A8A;
+}
+
+/* DEMO PLAYER */
+.audio-box {
+    margin-bottom: 25px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background: #1E3A8A;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+/* CONTACT */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+button {
+    margin-top: 15px;
+    padding: 12px;
+    width: 100%;
+    background: #1E3A8A;
+    color: white;
+    border: none;
+    font-size: 1em;
+}
+
+/* FOOTER */
+footer {
+    background: #0B1F3A;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="logo.png" alt="RadioBob Logo" class="logo">
+    <h1>RadioBob Voiceworks</h1>
+    <div class="tagline">A Voice You Can Trust</div>
+    <div class="tagline"><em>Always Real. Never Artificial.</em></div>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#demos">Demos</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+    <h2>About</h2>
+    <p>
+        I'm Bob Larimer, known professionally as “RadioBob.”  
+        With over 40 years of experience—from radio broadcasting to military communications and emergency dispatch—I deliver a voice that is calm, clear, and trusted.
+    </p>
+</section>
+
+<section id="demos">
+    <h2>Voice Demos</h2>
+
+    <div class="audio-box">
+        <h3>Corporate / Training</h3>
+        <audio controls src="demo1.mp3"></audio>
+    </div>
+
+    <div class="audio-box">
+        <h3>Storytelling / Audiobook</h3>
+        <audio controls src="demo2.mp3"></audio>
+    </div>
+
+    <div class="audio-box">
+        <h3>Authority / Announcement</h3>
+        <audio controls src="demo3.mp3"></audio>
+    </div>
+
+</section>
+
+<section id="services">
+    <h2>Services</h2>
+    <ul>
+        <li>Corporate Narration</li>
+        <li>eLearning & Training</li>
+        <li>Audiobooks</li>
+        <li>Faith-Based Content</li>
+        <li>Public Announcements</li>
+    </ul>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+
+    <form action="https://formspree.io/f/yourformid" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+
+    <p>
+        📞 417.429.0151<br>
+        ✉ radiobobvoiceworksllc@gmail.com
+    </p>
+</section>
+
+<footer>
+    <p>© 2026 RadioBob Voiceworks</p>
+</footer>
+
+<script>
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+    sections.forEach(section => {
+        const position = section.getBoundingClientRect().top;
+        if(position < window.innerHeight - 100) {
+            section.classList.add("visible");
+        }
+    });
+});
+</script>
+
+</body>
+</html>
